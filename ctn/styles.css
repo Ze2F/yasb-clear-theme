@@ -49,7 +49,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .window-controls-widget .btn:hover {
   background-color: rgba(255, 255, 255, 0.16);
@@ -66,16 +66,19 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
+.systray-popup {
+  background-color: rgba(8, 8, 8, 0.4);
+}
 .systray-popup .button {
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 8px;
   margin: 8px;
 }
 .systray-popup .button:hover {
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: #61ad7e;
 }
 
 .taskbar-widget .app-title {
@@ -86,7 +89,7 @@
   background-color: transparent;
   margin: 0 2px;
   padding: 0 8px;
-  border-radius: 8px;
+  border-radius: 4px;
   max-height: 24px;
 }
 .taskbar-widget .app-container:hover {
@@ -116,7 +119,7 @@
   min-height: 20px;
   margin: 0 2px;
   padding: 0 4px;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: red;
 }
 .taskbar-preview .close-button:hover {
@@ -175,7 +178,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .clock-popup .button:checked, .clock-popup .button:hover, .clock-popup .button.save, .clock-popup .button.start, .clock-popup .button.is-alarm-enabled {
   background-color: #3f925f;
@@ -213,7 +216,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .active-alarm-window .button:hover {
   background-color: #61ad7e;
@@ -225,7 +228,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .battery-widget .widget-container {
@@ -233,7 +236,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .battery-widget .widget-container .icon {
   font-family: Segoe Fluent Icons;
@@ -258,7 +261,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .brightness-widget .widget-container .label {
   margin-left: 4px;
@@ -271,7 +274,7 @@
 }
 .brightness-menu .monitor-row {
   background-color: rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
+  border-radius: 4px;
   margin: 18px;
   padding: 18px;
 }
@@ -284,7 +287,7 @@
 }
 .brightness-menu .slider-rows {
   background-color: rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 12px;
 }
 .brightness-menu .slider-icon {
@@ -292,11 +295,11 @@
 }
 .brightness-menu .brightness-slider::groove, .brightness-menu .contrast-slider::groove {
   background-color: rgba(128, 130, 158, 0.3);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .brightness-menu .brightness-slider::sub-page, .brightness-menu .contrast-slider::sub-page {
   background-color: #3f925f;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .brightness-menu .brightness-slider::handle, .brightness-menu .contrast-slider::handle {
   background-color: #61ad7e;
@@ -309,7 +312,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .volume-widget .widget-container .icon {
   font-family: Segoe Fluent Icons;
@@ -330,16 +333,16 @@
   max-width: 550px;
 }
 .audio-menu .system-volume-container {
-  border-radius: 8px;
+  border-radius: 4px;
   margin: 16px 0;
 }
 .audio-menu .system-volume-container .volume-slider::groove {
   background-color: rgba(128, 130, 158, 0.3);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .audio-menu .system-volume-container .volume-slider::sub-page {
   background-color: #3f925f;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .audio-menu .system-volume-container .volume-slider::handle {
   background-color: #61ad7e;
@@ -363,7 +366,7 @@
   margin: 0 16px;
   padding: 4px 16px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .audio-menu .toggle-apps.expanded {
   background-color: #3f925f;
@@ -388,11 +391,11 @@
 }
 .audio-menu .apps-container .app-volume .app-slider::groove {
   background-color: rgba(128, 130, 158, 0.3);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .audio-menu .apps-container .app-volume .app-slider::sub-page {
   background-color: #3f925f;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .audio-menu .apps-container .app-volume .app-slider::handle {
   background-color: #61ad7e;
@@ -405,7 +408,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .microphone-widget .widget-container .icon {
   font-family: Segoe Fluent Icons;
@@ -432,11 +435,11 @@
 }
 .microphone-menu .system-volume-container .volume-slider::groove {
   background-color: rgba(128, 130, 158, 0.3);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .microphone-menu .system-volume-container .volume-slider::sub-page {
   background-color: #3f925f;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .microphone-menu .system-volume-container .volume-slider::handle {
   background-color: #61ad7e;
@@ -462,7 +465,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .wifi-widget .widget-container .label {
   font-family: Segoe Fluent Icons;
@@ -521,7 +524,7 @@
   margin: 0 16px;
   padding: 4px 16px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .wifi-menu .wifi-item .connect:hover {
   background-color: #61ad7e;
@@ -550,7 +553,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .notification-widget .widget-container .icon {
   font-family: Segoe Fluent Icons;
@@ -573,7 +576,7 @@
   margin: 0 2px;
   padding: 0 8px;
   max-height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .power-menu-popup {
@@ -603,7 +606,7 @@
   background-color: rgba(255, 255, 255, 0.16);
   margin: 4px 8px;
   padding: 16px 32px;
-  border-radius: 8px;
+  border-radius: 14px;
   min-width: 220px;
   min-height: 100px;
 }

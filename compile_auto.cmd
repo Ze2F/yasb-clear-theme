@@ -1,1 +1,1 @@
-sass -w style.sass /ctn/styles.css
+sass -w --no-source-map style.sass ctn/styles.css

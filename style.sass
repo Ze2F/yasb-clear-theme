@@ -28,6 +28,8 @@ $bg2: rgba(255, 255, 255, 0.12)
 $bg3: rgba(255, 255, 255, 0.08)
 $bg4: rgba(255, 255, 255, 0.04)
 
+$padding-button: 8px
+
 *
   padding: 0
   margin: 0
@@ -73,7 +75,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     &:hover
       background-color: $bg1
     &.close
@@ -87,15 +89,16 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
 
 .systray-popup
+  background-color: $bg0
   .button
-    border-radius: $xsm
+    border-radius: $xsm2
     padding: $xsm
     margin: $xsm
     &:hover
-      background-color: $bg1
+      background-color: $green-light
 
 .taskbar-widget
   .app-title
@@ -105,7 +108,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     background-color: transparent
     margin: 0 2px
     padding: 0 8px
-    border-radius: $xsm
+    border-radius: $xsm2
     max-height: $xl2
     &:hover
       background-color: $bg1
@@ -127,7 +130,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     min-height: 20px
     margin: 0 2px
     padding: 0 4px
-    border-radius: $xsm
+    border-radius: $xsm2
     background-color: red
     &:hover
       background-color: $red-light
@@ -174,7 +177,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     &:checked,&:hover, &.save, &.start, &.is-alarm-enabled
       background-color: $green
       &:hover
@@ -203,7 +206,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     &:hover
       background-color: $green-light
 
@@ -214,7 +217,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
 
 .battery-widget
   .widget-container
@@ -222,7 +225,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     .icon
       font-family: $icon
       font-weight: 1200
@@ -242,7 +245,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     .label
       margin-left: $xsm2
 
@@ -252,7 +255,7 @@ $bg4: rgba(255, 255, 255, 0.04)
   max-width: 550px
   .monitor-row
     background-color: $bg1
-    border-radius: $xsm
+    border-radius: $xsm2
     margin: $xl
     padding: $xl
   .monitor-title
@@ -262,17 +265,17 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin-bottom: $sm
   .slider-rows
     background-color: $bg2
-    border-radius: $xsm
+    border-radius: $xsm2
     padding: $sm
   .slider-icon
     font-family: $icon
   .brightness-slider, .contrast-slider
     &::groove
       background-color: $grey
-      border-radius: $xsm
+      border-radius: $xsm2
     &::sub-page
       background-color: $green
-      border-radius: $xsm
+      border-radius: $xsm2
     &::handle
       background-color: $green-light
       height: $sm
@@ -284,7 +287,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     .icon
       font-family: $icon
       &.muted, &.no-device
@@ -299,15 +302,15 @@ $bg4: rgba(255, 255, 255, 0.04)
   min-width: 550px
   max-width: 550px
   .system-volume-container
-    border-radius: $xsm
+    border-radius: $xsm2
     margin: 16px 0
     .volume-slider
       &::groove
         background-color: $grey
-        border-radius: $xsm
+        border-radius: $xsm2
       &::sub-page
         background-color: $green
-        border-radius: $xsm
+        border-radius: $xsm2
       &::handle
         background-color: $green-light
         height: $sm
@@ -327,7 +330,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 16px
     padding: 4px 16px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     &.expanded
       background-color: $green
     &:hover
@@ -346,10 +349,10 @@ $bg4: rgba(255, 255, 255, 0.04)
         margin-left: $md
         &::groove
           background-color: $grey
-          border-radius: $xsm
+          border-radius: $xsm2
         &::sub-page
           background-color: $green
-          border-radius: $xsm
+          border-radius: $xsm2
         &::handle
           background-color: $green-light
           height: $sm
@@ -361,7 +364,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     .icon
       font-family: $icon
       &.muted, &.no-device
@@ -382,10 +385,10 @@ $bg4: rgba(255, 255, 255, 0.04)
     .volume-slider
       &::groove
         background-color: $grey
-        border-radius: $xsm
+        border-radius: $xsm2
       &::sub-page
         background-color: $green
-        border-radius: $xsm
+        border-radius: $xsm2
       &::handle
         background-color: $green-light
         height: $sm
@@ -408,7 +411,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     .label
       font-family: $icon
 
@@ -454,7 +457,7 @@ $bg4: rgba(255, 255, 255, 0.04)
       margin: 0 16px
       padding: 4px 16px
       max-height: $xl2
-      border-radius: $xsm
+      border-radius: $xsm2
       &:hover
         background-color: $green-light
       &:pressed
@@ -477,7 +480,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
     .icon
       font-family: $icon
       &.new-notification
@@ -497,7 +500,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     margin: 0 2px
     padding: 0 8px
     max-height: $xl2
-    border-radius: $xsm
+    border-radius: $xsm2
 
 .power-menu-popup
   background-color: $bg1
@@ -521,7 +524,7 @@ $bg4: rgba(255, 255, 255, 0.04)
     background-color: $bg1
     margin: 4px 8px
     padding: 16px 32px
-    border-radius: $xsm
+    border-radius: $md
     min-width: 220px
     min-height: 100px
     &.hover
