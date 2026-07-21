@@ -1,0 +1,632 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: Segoe UI, JetBrainsMono NFP;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #FFF;
+}
+
+.yasb-bar {
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.tooltip {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 6px 12px;
+}
+
+.context-menu, .context-menu .menu-checkbox {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.context-menu::item, .context-menu .menu-checkbox .checkbox {
+  padding: 8px 12px;
+  border-radius: none;
+}
+.context-menu::item:selected, .context-menu::item .menu-checkbox:hover, .context-menu .menu-checkbox .checkbox:selected, .context-menu .menu-checkbox .checkbox .menu-checkbox:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.context-menu::separator {
+  max-height: 1px;
+  background-color: rgba(128, 130, 158, 0.3);
+}
+.context-menu .menu-checkbox .checkbox::indicator {
+  background-color: rgba(128, 130, 158, 0.3);
+}
+.context-menu .menu-checkbox .checkbox::indicator:checked {
+  background-color: #3f925f;
+}
+.context-menu .menu-checkbox .checkbox::indicator:unchecked {
+  background-color: #cb3b42;
+}
+
+.window-controls-widget .btn {
+  background-color: rgba(255, 255, 255, 0.12);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.window-controls-widget .btn:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.window-controls-widget .btn.close {
+  background-color: #cb3b42;
+}
+.window-controls-widget .btn.close:hover {
+  background-color: #e04c52;
+}
+
+.systray .button, .systray .unpinned-visibility-btn {
+  background-color: rgba(255, 255, 255, 0.12);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+
+.systray-popup .button {
+  border-radius: 8px;
+  padding: 8px;
+  margin: 8px;
+}
+.systray-popup .button:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.taskbar-widget .app-title {
+  font-size: 12px;
+  margin-left: 4px;
+}
+.taskbar-widget .app-container {
+  background-color: transparent;
+  margin: 0 2px;
+  padding: 0 8px;
+  border-radius: 8px;
+  max-height: 24px;
+}
+.taskbar-widget .app-container:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.taskbar-widget .app-container.foreground, .taskbar-widget .app-container.running {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.taskbar-widget .app-container.foreground:hover, .taskbar-widget .app-container.running:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.taskbar-widget .app-container.flashing {
+  background-color: #cb3b42;
+}
+.taskbar-widget .app-container.flashing:hover {
+  background-color: #e04c52;
+}
+
+.taskbar-preview {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.taskbar-preview .header {
+  margin-bottom: 12px;
+}
+.taskbar-preview .close-button {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0 2px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background-color: red;
+}
+.taskbar-preview .close-button:hover {
+  background-color: #e04c52;
+}
+
+.clock-popup.calendar {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.clock-popup.calendar .calendar-table, .clock-popup.calendar .calendar-table::item {
+  color: rgba(128, 130, 158, 0.3);
+  font-size: lg;
+  border-radius: 4px;
+  outline: none;
+}
+.clock-popup.calendar .calendar-table::item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.clock-popup.calendar .calendar-table::item:selected {
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.clock-popup.calendar .day-label, .clock-popup.calendar .year-label, .clock-popup.calendar .month-label, .clock-popup.calendar .date-label, .clock-popup.calendar .week-label, .clock-popup.calendar .holiday-label {
+  font-size: 16px;
+  min-width: 250px;
+  max-width: 250px;
+}
+.clock-popup.calendar .week-label, .clock-popup.calendar .holiday-label {
+  color: rgba(128, 130, 158, 0.3);
+}
+.clock-popup.calendar .holiday-label, .clock-popup.calendar .month-label {
+  font-weight: normal;
+}
+.clock-popup.calendar .date-label {
+  font-size: 128px;
+  font-weight: 800;
+  padding: 16px 0;
+}
+.clock-popup.calendar .day-label {
+  margin-top: 14px;
+}
+.clock-popup .clock-popup-container, .clock-popup .clock-popup-footer {
+  padding: 12px;
+}
+.clock-popup .clock-label-timer {
+  font-size: 18px;
+}
+.clock-popup .clock-input-time {
+  font-size: 18px;
+}
+.clock-popup .clock-input-time.colon {
+  font-weight: 1200;
+}
+.clock-popup .button {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.clock-popup .button:checked, .clock-popup .button:hover, .clock-popup .button.save, .clock-popup .button.start, .clock-popup .button.is-alarm-enabled {
+  background-color: #3f925f;
+}
+.clock-popup .button:checked:hover, .clock-popup .button:hover:hover, .clock-popup .button.save:hover, .clock-popup .button.start:hover, .clock-popup .button.is-alarm-enabled:hover {
+  background-color: #61ad7e;
+}
+.clock-popup .button.cancel, .clock-popup .button.delete, .clock-popup .button.is-alarm-disabled {
+  background-color: #cb3b42;
+}
+.clock-popup .button.cancel:hover, .clock-popup .button.delete:hover, .clock-popup .button.is-alarm-disabled:hover {
+  background-color: #e04c52;
+}
+
+.active-alarm-window {
+  padding: 8px;
+  min-width: 750px;
+  max-width: 750px;
+}
+.active-alarm-window .alarm-title {
+  font-size: 36px;
+  font-weight: 1200;
+}
+.active-alarm-window .alarm-title-icon {
+  font-size: 128px;
+  font-weight: 1200;
+}
+.active-alarm-window .alarm-info {
+  font-size: 18px;
+  color: rgba(186, 187, 202, 0.3);
+  margin-bottom: 32px;
+}
+.active-alarm-window .button {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.active-alarm-window .button:hover {
+  background-color: #61ad7e;
+}
+
+.userinfo-grouper .container .grouper-button {
+  background-color: rgba(255, 255, 255, 0.16);
+  font-family: Segoe Fluent Icons;
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+
+.battery-widget .widget-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.battery-widget .widget-container .icon {
+  font-family: Segoe Fluent Icons;
+  font-weight: 1200;
+}
+.battery-widget .widget-container .icon.status-critical {
+  color: #cb3b42;
+}
+.battery-widget .widget-container .icon.status-low {
+  color: #e04c52;
+}
+.battery-widget .widget-container .icon.status-medium {
+  color: #fae93f;
+}
+.battery-widget .widget-container .label {
+  margin-left: 4px;
+}
+
+.brightness-widget .widget-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  font-family: Segoe Fluent Icons;
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.brightness-widget .widget-container .label {
+  margin-left: 4px;
+}
+
+.brightness-menu {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-width: 550px;
+  max-width: 550px;
+}
+.brightness-menu .monitor-row {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  margin: 18px;
+  padding: 18px;
+}
+.brightness-menu .monitor-title {
+  font-size: 18px;
+}
+.brightness-menu .monitor-subtitle {
+  color: rgba(186, 187, 202, 0.3);
+  margin-bottom: 12px;
+}
+.brightness-menu .slider-rows {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 12px;
+}
+.brightness-menu .slider-icon {
+  font-family: Segoe Fluent Icons;
+}
+.brightness-menu .brightness-slider::groove, .brightness-menu .contrast-slider::groove {
+  background-color: rgba(128, 130, 158, 0.3);
+  border-radius: 8px;
+}
+.brightness-menu .brightness-slider::sub-page, .brightness-menu .contrast-slider::sub-page {
+  background-color: #3f925f;
+  border-radius: 8px;
+}
+.brightness-menu .brightness-slider::handle, .brightness-menu .contrast-slider::handle {
+  background-color: #61ad7e;
+  height: 12px;
+  width: 12px;
+}
+
+.volume-widget .widget-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.volume-widget .widget-container .icon {
+  font-family: Segoe Fluent Icons;
+}
+.volume-widget .widget-container .icon.muted, .volume-widget .widget-container .icon.no-device {
+  color: #cb3b42;
+}
+.volume-widget .widget-container .icon.muted:hover, .volume-widget .widget-container .icon.no-device:hover {
+  color: #e04c52;
+}
+.volume-widget .widget-container .label {
+  margin-left: 4px;
+}
+
+.audio-menu {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-width: 550px;
+  max-width: 550px;
+}
+.audio-menu .system-volume-container {
+  border-radius: 8px;
+  margin: 16px 0;
+}
+.audio-menu .system-volume-container .volume-slider::groove {
+  background-color: rgba(128, 130, 158, 0.3);
+  border-radius: 8px;
+}
+.audio-menu .system-volume-container .volume-slider::sub-page {
+  background-color: #3f925f;
+  border-radius: 8px;
+}
+.audio-menu .system-volume-container .volume-slider::handle {
+  background-color: #61ad7e;
+  height: 12px;
+  width: 12px;
+}
+.audio-menu .audio-container .device {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.audio-menu .audio-container .device.selected {
+  background-color: #3f925f;
+}
+.audio-menu .audio-container .device:hover {
+  background-color: #61ad7e;
+}
+.audio-menu .toggle-apps {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 16px;
+  padding: 4px 16px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.audio-menu .toggle-apps.expanded {
+  background-color: #3f925f;
+}
+.audio-menu .toggle-apps:hover {
+  background-color: #61ad7e;
+}
+.audio-menu .apps-container .app-volume {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+.audio-menu .apps-container .app-volume .app-label {
+  font-size: 16px;
+}
+.audio-menu .apps-container .app-volume .app-icon-container, .audio-menu .apps-container .app-volume .app-slider {
+  margin-top: 14px;
+}
+.audio-menu .apps-container .app-volume .app-slider {
+  margin-left: 14px;
+}
+.audio-menu .apps-container .app-volume .app-slider::groove {
+  background-color: rgba(128, 130, 158, 0.3);
+  border-radius: 8px;
+}
+.audio-menu .apps-container .app-volume .app-slider::sub-page {
+  background-color: #3f925f;
+  border-radius: 8px;
+}
+.audio-menu .apps-container .app-volume .app-slider::handle {
+  background-color: #61ad7e;
+  height: 12px;
+  width: 12px;
+}
+
+.microphone-widget .widget-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.microphone-widget .widget-container .icon {
+  font-family: Segoe Fluent Icons;
+}
+.microphone-widget .widget-container .icon.muted, .microphone-widget .widget-container .icon.no-device {
+  color: #cb3b42;
+}
+.microphone-widget .widget-container .icon.muted:hover, .microphone-widget .widget-container .icon.no-device:hover {
+  color: #e04c52;
+}
+.microphone-widget .widget-container .label {
+  margin-left: 4px;
+}
+
+.microphone-menu {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-width: 550px;
+  max-width: 550px;
+}
+.microphone-menu .system-volume-container {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 12px;
+}
+.microphone-menu .system-volume-container .volume-slider::groove {
+  background-color: rgba(128, 130, 158, 0.3);
+  border-radius: 8px;
+}
+.microphone-menu .system-volume-container .volume-slider::sub-page {
+  background-color: #3f925f;
+  border-radius: 8px;
+}
+.microphone-menu .system-volume-container .volume-slider::handle {
+  background-color: #61ad7e;
+  height: 12px;
+  width: 12px;
+}
+.microphone-menu .microphone-container .device {
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+.microphone-menu .microphone-container .device.selected {
+  background-color: #3f925f;
+}
+.microphone-menu .microphone-container .device:hover {
+  background-color: #61ad7e;
+}
+
+.wifi-widget .widget-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.wifi-widget .widget-container .label {
+  font-family: Segoe Fluent Icons;
+}
+
+.wifi-menu {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-width: 550px;
+  max-width: 550px;
+  min-height: 480px;
+  max-height: 720px;
+}
+.wifi-menu .progress-bar {
+  min-height: 1px;
+  color: #61ad7e;
+}
+.wifi-menu .header {
+  background-color: rgba(255, 255, 255, 0.12);
+  font-size: 24px;
+  padding: 18px;
+}
+.wifi-menu .error-message {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #e04c52;
+}
+.wifi-menu .wifi-item {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 12px;
+  margin-bottom: 14px;
+}
+.wifi-menu .wifi-item:hover {
+  background-color: #61ad7e;
+}
+.wifi-menu .wifi-item[active=true] {
+  background-color: #3f925f;
+}
+.wifi-menu .wifi-item .name, .wifi-menu .wifi-item .icon, .wifi-menu .wifi-item .password, .wifi-menu .wifi-item .status, .wifi-menu .wifi-item .strength {
+  font-size: 16px;
+}
+.wifi-menu .wifi-item .name {
+  margin-left: 4px;
+}
+.wifi-menu .wifi-item .icon {
+  font-family: Segoe Fluent Icons;
+}
+.wifi-menu .wifi-item .status, .wifi-menu .wifi-item .strength {
+  margin-right: 14px;
+}
+.wifi-menu .wifi-item .password {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1 solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+.wifi-menu .wifi-item .connect {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 16px;
+  padding: 4px 16px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.wifi-menu .wifi-item .connect:hover {
+  background-color: #61ad7e;
+}
+.wifi-menu .wifi-item .connect:pressed {
+  background-color: #223a2c;
+}
+.wifi-menu .footer {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 18px;
+}
+.wifi-menu .footer .settings-button, .wifi-menu .footer .refresh-icon {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+}
+.wifi-menu .footer .refresh-icon {
+  font-family: Segoe Fluent Icons;
+}
+.wifi-menu .footer .refresh-icon:hover {
+  color: #61ad7e;
+}
+
+.notification-widget .widget-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+.notification-widget .widget-container .icon {
+  font-family: Segoe Fluent Icons;
+}
+.notification-widget .widget-container .icon.new-notification {
+  color: #fae93f;
+}
+.notification-widget .widget-container .label {
+  margin-left: 4px;
+}
+
+.power-menu-overlay .uptime {
+  background-color: #223a2c;
+  padding: 14px;
+  font-size: 18px;
+}
+
+.power-menu-widget .label {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 8px;
+}
+
+.power-menu-popup {
+  background-color: rgba(255, 255, 255, 0.16);
+  padding: 64px;
+}
+.power-menu-popup .profile-info .profile-avatar {
+  background-color: transparent;
+  border: none;
+}
+.power-menu-popup .profile-info .profile-username {
+  font-size: 48px;
+}
+.power-menu-popup .profile-info .profile-account-type {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.16);
+  margin-bottom: 14px;
+}
+.power-menu-popup .profile-info .profile-email {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.16);
+}
+.power-menu-popup .buttons {
+  margin-top: 18px;
+}
+.power-menu-popup .button {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 4px 8px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  min-width: 220px;
+  min-height: 100px;
+}
+.power-menu-popup .button.hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.power-menu-popup .button .label {
+  font-size: 16px;
+}
+.power-menu-popup .button .icon {
+  font-size: 48px;
+}
+.power-menu-popup .button.cancel {
+  background-color: #3f925f;
+}
+.power-menu-popup .button.cancel:hover {
+  background-color: #61ad7e;
+}
+.power-menu-popup .button.signout {
+  background-color: #cb3b42;
+}
+.power-menu-popup .button.signout:hover {
+  background-color: #e04c52;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,540 @@
+$font: Segoe UI, JetBrainsMono NFP
+$icon: Segoe Fluent Icons
+$xsm2: 4px
+$xsm: 8px
+$sm: 12px
+$md: 14px
+$lg: 16px
+$xl: 18px
+$xl2: 24px
+$xl3: 30px
+$xl4: 36px
+$xl5: 48px
+
+$primary: #FFF
+$grey: rgba(128, 130, 158, 0.3)
+$grey-light: rgba(186, 187, 202, 0.3)
+$green: #3f925f
+$green-dark: #223a2c
+$green-light: #61ad7e
+$red: #cb3b42
+$red-dark: #5a1e22
+$red-light: #e04c52
+$yellow: #fae93f
+$bg: rgba(0, 0, 0, 0.75)
+$bg0: rgba(8, 8, 8, 0.4)
+$bg1: rgba(255, 255, 255, 0.16)
+$bg2: rgba(255, 255, 255, 0.12)
+$bg3: rgba(255, 255, 255, 0.08)
+$bg4: rgba(255, 255, 255, 0.04)
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font: $font
+  font-size: $md
+  font-weight: 600
+  letter-spacing: 1px
+  color: $primary
+
+.yasb-bar
+  padding: 4px
+  background-color: $bg4
+
+.tooltip
+  background-color: $bg
+  border: 1px solid $bg1
+  padding: 6px 12px
+
+.context-menu
+  &, .menu-checkbox
+    background-color: $bg
+  &::item, .menu-checkbox .checkbox
+    padding: 8px 12px
+    border-radius: none
+    &:selected, .menu-checkbox:hover
+      background-color: $bg1
+  &::separator
+    max-height: 1px
+    background-color: $grey
+  .menu-checkbox
+    .checkbox
+      &::indicator
+        background-color: $grey
+        &:checked
+          background-color: $green
+        &:unchecked
+          background-color: $red
+
+.window-controls-widget
+  .btn
+    background-color: $bg2
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    &:hover
+      background-color: $bg1
+    &.close
+      background-color: $red
+      &:hover
+        background-color: $red-light
+
+.systray
+  .button, .unpinned-visibility-btn
+    background-color: $bg2
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+
+.systray-popup
+  .button
+    border-radius: $xsm
+    padding: $xsm
+    margin: $xsm
+    &:hover
+      background-color: $bg1
+
+.taskbar-widget
+  .app-title
+    font-size: $sm
+    margin-left: $xsm2
+  .app-container
+    background-color: transparent
+    margin: 0 2px
+    padding: 0 8px
+    border-radius: $xsm
+    max-height: $xl2
+    &:hover
+      background-color: $bg1
+    &.foreground, &.running
+      background-color: $bg2
+      &:hover
+        background-color: $bg1
+    &.flashing
+      background-color: $red
+      &:hover
+        background-color: $red-light
+
+.taskbar-preview
+  background-color: $bg
+  .header
+    margin-bottom: $sm
+  .close-button
+    min-width: 20px
+    min-height: 20px
+    margin: 0 2px
+    padding: 0 4px
+    border-radius: $xsm
+    background-color: red
+    &:hover
+      background-color: $red-light
+
+.clock-popup
+  &.calendar
+    background-color: $bg
+    .calendar-table
+      &, &::item
+        color: $grey
+        font-size: lg
+        border-radius: $xsm2
+        outline: none
+      &::item
+        &:hover
+          background-color: $bg3
+        &:selected
+          color: $primary
+          background-color: $bg1
+    .day-label, .year-label, .month-label, .date-label, .week-label, .holiday-label
+      font-size: $lg
+      min-width: 250px
+      max-width: 250px
+    .week-label, .holiday-label
+      color: $grey
+    .holiday-label, .month-label
+      font-weight: normal
+    .date-label
+      font-size: 128px
+      font-weight: 800
+      padding: 16px 0
+    .day-label
+      margin-top: $md
+  .clock-popup-container, .clock-popup-footer
+    padding: $sm
+  .clock-label-timer
+    font-size: $xl
+  .clock-input-time
+    font-size: $xl
+    &.colon
+      font-weight: 1200
+  .button
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    &:checked,&:hover, &.save, &.start, &.is-alarm-enabled
+      background-color: $green
+      &:hover
+        background-color: $green-light
+    &.cancel, &.delete, &.is-alarm-disabled
+      background-color: $red
+      &:hover
+        background-color: $red-light
+
+.active-alarm-window
+  padding: 8px
+  min-width: 750px
+  max-width: 750px
+  .alarm-title
+    font-size: $xl4
+    font-weight: 1200
+  .alarm-title-icon
+    font-size: 128px
+    font-weight: 1200
+  .alarm-info
+    font-size: $xl
+    color: $grey-light
+    margin-bottom: 32px
+  .button
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    &:hover
+      background-color: $green-light
+
+.userinfo-grouper .container
+  .grouper-button
+    background-color: $bg1
+    font-family: $icon
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+
+.battery-widget
+  .widget-container
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    .icon
+      font-family: $icon
+      font-weight: 1200
+      &.status-critical
+        color: $red
+      &.status-low
+        color: $red-light
+      &.status-medium
+        color: $yellow
+    .label
+      margin-left: $xsm2
+
+.brightness-widget
+  .widget-container
+    background-color: $bg1
+    font-family: $icon
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    .label
+      margin-left: $xsm2
+
+.brightness-menu
+  background-color: $bg
+  min-width: 550px
+  max-width: 550px
+  .monitor-row
+    background-color: $bg1
+    border-radius: $xsm
+    margin: $xl
+    padding: $xl
+  .monitor-title
+    font-size: $xl
+  .monitor-subtitle
+    color: $grey-light
+    margin-bottom: $sm
+  .slider-rows
+    background-color: $bg2
+    border-radius: $xsm
+    padding: $sm
+  .slider-icon
+    font-family: $icon
+  .brightness-slider, .contrast-slider
+    &::groove
+      background-color: $grey
+      border-radius: $xsm
+    &::sub-page
+      background-color: $green
+      border-radius: $xsm
+    &::handle
+      background-color: $green-light
+      height: $sm
+      width: $sm
+
+.volume-widget
+  .widget-container
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    .icon
+      font-family: $icon
+      &.muted, &.no-device
+        color: $red
+        &:hover
+          color: $red-light
+    .label
+      margin-left: $xsm2
+
+.audio-menu
+  background-color: $bg
+  min-width: 550px
+  max-width: 550px
+  .system-volume-container
+    border-radius: $xsm
+    margin: 16px 0
+    .volume-slider
+      &::groove
+        background-color: $grey
+        border-radius: $xsm
+      &::sub-page
+        background-color: $green
+        border-radius: $xsm
+      &::handle
+        background-color: $green-light
+        height: $sm
+        width: $sm
+  .audio-container
+    .device
+      background-color: $bg2
+      border-radius: $sm
+      padding: $md
+      margin-bottom: $md
+      &.selected
+        background-color: $green
+      &:hover
+        background-color: $green-light
+  .toggle-apps
+    background-color: $bg1
+    margin: 0 16px
+    padding: 4px 16px
+    max-height: $xl2
+    border-radius: $xsm
+    &.expanded
+      background-color: $green
+    &:hover
+      background-color: $green-light
+  .apps-container
+    .app-volume
+      background-color: $bg2
+      border-radius: $sm
+      padding: $sm
+      margin-bottom: $md
+      .app-label
+        font-size: $lg
+      .app-icon-container, .app-slider
+        margin-top: $md
+      .app-slider
+        margin-left: $md
+        &::groove
+          background-color: $grey
+          border-radius: $xsm
+        &::sub-page
+          background-color: $green
+          border-radius: $xsm
+        &::handle
+          background-color: $green-light
+          height: $sm
+          width: $sm
+
+.microphone-widget
+  .widget-container
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    .icon
+      font-family: $icon
+      &.muted, &.no-device
+        color: $red
+        &:hover
+          color: $red-light
+    .label
+      margin-left: $xsm2
+
+.microphone-menu
+  background-color: $bg
+  min-width: 550px
+  max-width: 550px
+  .system-volume-container
+    background-color: $bg2
+    border-radius: $sm
+    padding: $sm
+    .volume-slider
+      &::groove
+        background-color: $grey
+        border-radius: $xsm
+      &::sub-page
+        background-color: $green
+        border-radius: $xsm
+      &::handle
+        background-color: $green-light
+        height: $sm
+        width: $sm
+  .microphone-container
+    .device
+      font-size: $lg
+      background-color: $bg2
+      border-radius: $sm
+      padding: $sm
+      margin-bottom: $md
+      &.selected
+        background-color: $green
+      &:hover
+        background-color: $green-light
+
+.wifi-widget
+  .widget-container
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    .label
+      font-family: $icon
+
+.wifi-menu
+  background-color: $bg
+  min-width: 550px
+  max-width: 550px
+  min-height: 480px
+  max-height: 720px
+  .progress-bar
+    min-height: 1px
+    color: $green-light
+  .header
+    background-color: $bg2
+    font-size: $xl2
+    padding: $xl
+  .error-message
+    background-color: $bg3
+    color: $red-light
+  .wifi-item
+    background-color: $bg2
+    padding: $sm
+    margin-bottom: $md
+    &:hover
+      background-color: $green-light
+    &[active=true]
+      background-color: $green
+
+    .name, .icon, .password, .status, .strength
+      font-size: $lg
+    .name
+      margin-left: $xsm2
+    .icon
+      font-family: $icon
+    .status, .strength
+      margin-right: $md
+    .password
+      background-color: $bg3
+      border: 1 solid $bg2
+      border-radius: $xsm2
+    .connect
+      background-color: $bg1
+      margin: 0 16px
+      padding: 4px 16px
+      max-height: $xl2
+      border-radius: $xsm
+      &:hover
+        background-color: $green-light
+      &:pressed
+        background-color: $green-dark
+  .footer
+    background-color: $bg2
+    padding: $xl
+    .settings-button, .refresh-icon
+      font-size: $lg
+      background-color: transparent
+      border: none
+    .refresh-icon
+      font-family: $icon
+      &:hover
+        color: $green-light
+
+.notification-widget
+  .widget-container
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+    .icon
+      font-family: $icon
+      &.new-notification
+        color: $yellow
+    .label
+      margin-left: $xsm2
+
+.power-menu-overlay
+  .uptime
+    background-color: $green-dark
+    padding: $md
+    font-size: $xl
+
+.power-menu-widget
+  .label
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm
+
+.power-menu-popup
+  background-color: $bg1
+  padding: 64px
+  .profile-info
+    .profile-avatar
+      background-color: transparent
+      border: none
+    .profile-username
+      font-size: $xl5
+    .profile-account-type
+      font-size: $sm
+      color: $bg1
+      margin-bottom: $md
+    .profile-email
+      font-size: $sm
+      color: $bg1
+  .buttons
+    margin-top: $xl
+  .button
+    background-color: $bg1
+    margin: 4px 8px
+    padding: 16px 32px
+    border-radius: $xsm
+    min-width: 220px
+    min-height: 100px
+    &.hover
+      background-color: $bg2
+    .label
+      font-size: $lg
+    .icon
+      font-size: $xl5
+    &.cancel
+      background-color: $green
+      &:hover
+        background-color: $green-light
+    &.signout
+      background-color: $red
+      &:hover
+        background-color: $red-light

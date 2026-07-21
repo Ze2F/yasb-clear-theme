@@ -1,0 +1,263 @@
+show_systray: true
+tooltip:
+  blur_effect:
+    enabled: true
+bars:
+  main-bar:
+    window_flags:
+      windows_app_bar: true
+    blur_effect:
+      enabled: true
+    dimensions:
+      height: 36
+    widgets:
+      left:
+        - "window_controls"
+        - "systray"
+        - "taskbar"
+      center:
+        - "clock"
+      right:
+        - "battery"
+        - "userconfig-grouper"
+        - "notifications"
+        - "power_menu"
+widgets:
+  window_controls:
+    type: "yasb.window_controls.WindowControlsWidget"
+    options:
+      maximized_only: false
+      buttons: ["close", "maximize", "minimize"]
+      button_labels:
+        minimize: "‾"
+        maximize: "■"
+        restore: "□"
+        close: "✗"
+      monitor_exclusive: true
+      animation_duration: 120
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      label_collapsed: "\u25BC"
+      label_expanded: "\u25B2"
+      label_position: "right"
+      show_battery: false
+      show_volume: false
+      show_network: false
+      use_hook: true
+      show_in_popup: true
+      icons_per_row: 5
+      popup:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: None
+        alignment: "left"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      tooltip: false
+      show_only_visible: false
+      strict_filtering: false
+      monitor_exclusive: false
+      title_label:
+        enabled: true
+        show: "focused"
+        min_length: 20
+        max_length: 20
+      animation:
+        enabled: true
+      preview:
+        enabled: true
+        delay: 200
+        width: 480
+        padding: 16
+        margin: 8
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%d-%m-%y %H:%M:%S}"
+      label_alt: "{%A, %d %B %Y, %H:%M:%S}"
+      update_interval: 1000
+      locale: "th_TH"
+      timezones: ["Asia/Bangkok"]
+      callbacks:
+        on_left: "toggle_calendar"
+        on_middle: "toggle_label"
+        on_right: "context_menu"
+      calendar:
+        blur: true
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        show_holidays: true
+        show_week_numbers: true
+        show_years: true
+        country_code: "TH"
+  brightness:
+    type: "yasb.brightness.BrightnessWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span> {percent}%"
+      tooltip: true
+      hide_unsupported: true
+      brightness_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        brightness_icon: "\ue706"
+        contrast_icon: "\ue7a1"
+      callbacks:
+        on_left: "toggle_brightness_menu"
+        on_middle: "toggle_label"
+  microphone:
+    type: "yasb.microphone.MicrophoneWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span> {level}"
+      mute_text: "mute"
+      icons:
+        normal: "\ue720"
+        muted: "\uec54"
+      mic_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+      callbacks:
+        on_left: "toggle_mic_menu"
+        on_middle: "toggle_label"
+        on_right: "toggle_mute"
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span> {level}"
+      volume_icons:
+        - "\ue74f"
+        - "\ue992"
+        - "\ue993"
+        - "\ue994"
+        - "\ue995"
+      callbacks:
+        on_left: "toggle_volume_menu"
+        on_middle: "toggle_label"
+        on_right: "toggle_mute"
+      audio_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_apps: true
+        show_app_labels: true
+        show_app_icons: true
+        show_apps_expanded: true
+        app_icons:
+          toggle_down: "\uf078"
+          toggle_up: "\uf077"
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "<span>{wifi_icon}</span>"
+      label_alt: "<span>{wifi_icon}</span> {wifi_name}"
+      update_interval: 5000
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "toggle_label"
+        on_right: "exec cmd.exe /c start ms-settings:network"
+      ethernet_label: "\ue839"
+      ethernet_label_alt: "\ue839 {ip_addr}"
+      ethernet_icon: "\ue839"
+      wifi_icons: [
+        "\udb82\udd2e",
+        "\udb82\udd1f",
+        "\udb82\udd22",
+        "\udb82\udd25",
+        "\udb82\udd28"
+      ]
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+  userconfig-grouper:
+    type: "yasb.grouper.GrouperWidget"
+    options:
+      class_name: "userinfo-grouper"
+      widgets: [
+        "brightness",
+        "microphone",
+        "volume",
+        "wifi",
+      ]
+      collapse_options:
+        enabled: true
+        exclude_widgets: []
+        expanded_label: "\ue76c\ue713"
+        collapsed_label: "\ue76b\ue713"
+        label_position: "right"
+  battery:
+    type: "yasb.battery.BatteryWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span> {percent}%"
+      hide_unsupported: True
+      callbacks:
+        on_left: "do_nothing"
+        on_middle: "toggle_label"
+        on_right: "do_nothing"
+      charging_options:
+        icon_format: "{charging_icon}"
+        blink_charging_icon: true
+        blink_interval: 500
+      status_icons:
+        icon_charging: "\uebb5"
+        icon_critical: "\ue850"
+        icon_low: "\ue851"
+        icon_medium: "\ue855"
+        icon_high: "\ue858"
+        icon_full: "\ue83f"
+  notifications:
+    type: "yasb.notifications.NotificationsWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span> {count}"
+      icons:
+        default: "\uf2a3"
+        new: "\uf2a5"
+      callbacks:
+        on_left: "toggle_notification"
+        on_middle: "toggle_label"
+        on_right: "do_nothing"
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      show_user: true
+      blur: true
+      blur_background: true
+      button_row: 3
+      profile_image_size: 120
+      buttons:
+        restart: ["\uead2", "Restart"]
+        shutdown: ["\uf011", "Shut Down"]
+        signout: ["\udb80\udf43", "Sign out"]
+        hibernate: ["\uf28e", "Hibernate"]
+        lock: ["\uea75", "Lock"]
+        cancel: ["\udb81\udf3a", "Cancel"]
