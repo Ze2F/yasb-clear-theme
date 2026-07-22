@@ -1,7 +1,16 @@
-# Yasb bar 
+# Yasb bar
+## How to install
+  1. Download & Install the latest release from [Releases](https://github.com/amnweb/yasb-clear-theme/releases).
+  2. Copy `config.yaml` and `styles.css` in `ctn` folder into `%USERPROFILE%/.config/yasb/`.
+  3. Enjoy!
+
+## Note
+  - Please backup your existing `config.yaml` and `styles.css` before installing this theme.
+  - This theme is not available in YASB Theme for now. I will request it to be added soon after all styles are implemented.
 
 ## preview
-![Top bar preview](topbar.png)
+
+![](topbar.png)
 ![]({2C7C68FA-E34D-4FC5-B691-3F227F677E79}.png)
 ![]({5511763E-DD84-48C1-9FB8-0ECCEEF1B3ED}.png)
 ![]({1B13AB1B-C60D-41D3-B3C3-B6B44761EAF3}.png)
