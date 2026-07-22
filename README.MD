@@ -8,7 +8,7 @@
   - Please backup your existing `config.yaml` and `styles.css` before installing this theme.
   - This theme is not available in YASB Theme for now. I will request it to be added soon after all styles are implemented.
 
-## preview
+## Preview
 
 ![](topbar.png)
 ![]({2C7C68FA-E34D-4FC5-B691-3F227F677E79}.png)
