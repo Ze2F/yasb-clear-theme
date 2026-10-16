@@ -115,12 +115,19 @@
   margin-bottom: 12px;
 }
 .taskbar-preview .close-button {
-  min-width: 20px;
-  min-height: 20px;
-  margin: 0 2px;
-  padding: 0 4px;
+  font-family: Segoe Fluent Icons;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  min-width: 24px;
+  max-width: 24px;
+  min-height: 24px;
+  max-height: 24px;
+  margin: 0;
+  padding: 0;
+  border: none;
   border-radius: 4px;
-  background-color: red;
+  background-color: #cb3b42;
 }
 .taskbar-preview .close-button:hover {
   background-color: #e04c52;
@@ -229,6 +236,122 @@
   padding: 0 8px;
   max-height: 24px;
   border-radius: 4px;
+}
+
+.media-lite-widget .widget-container, .control-center-widget .widget-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 2px;
+  padding: 0 8px;
+  max-height: 24px;
+  border-radius: 4px;
+}
+.media-lite-widget .icon, .control-center-widget .icon {
+  font-family: Segoe Fluent Icons;
+  font-weight: 400;
+}
+
+.media-lite-widget .text {
+  padding-left: 8px;
+}
+.media-lite-widget .title, .media-lite-widget .artist {
+  font-size: 10px;
+  letter-spacing: 0;
+}
+.media-lite-widget .artist {
+  color: rgba(186, 187, 202, 0.3);
+}
+
+.media-lite-menu {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-width: 320px;
+  max-width: 320px;
+}
+.media-lite-menu .header {
+  padding: 16px 16px 0;
+}
+.media-lite-menu .controls {
+  padding: 24px 16px;
+}
+.media-lite-menu .title {
+  font-size: 16px;
+}
+.media-lite-menu .artist {
+  color: rgba(186, 187, 202, 0.3);
+  font-size: 12px;
+  margin: 4px 0 16px;
+}
+.media-lite-menu .btn, .media-lite-menu .volume-button {
+  font-family: Segoe Fluent Icons;
+  font-weight: 400;
+  font-size: 16px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 4px;
+}
+.media-lite-menu .btn:hover, .media-lite-menu .volume-button:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.media-lite-menu .btn {
+  margin: 4px 2px;
+}
+.media-lite-menu .btn.play, .media-lite-menu .btn.active {
+  background-color: #3f925f;
+}
+.media-lite-menu .btn.play:hover, .media-lite-menu .btn.active:hover {
+  background-color: #61ad7e;
+}
+.media-lite-menu .btn.disabled, .media-lite-menu .btn.disabled:hover {
+  color: rgba(186, 187, 202, 0.3);
+  background-color: transparent;
+}
+.media-lite-menu .volume-button.muted {
+  color: #e04c52;
+}
+.media-lite-menu .volume-button.unavailable {
+  color: rgba(186, 187, 202, 0.3);
+}
+.media-lite-menu .playback-time {
+  color: rgba(186, 187, 202, 0.3);
+  font-size: 12px;
+}
+.media-lite-menu .progress-slider {
+  min-height: 12px;
+  margin: 4px 0;
+}
+.media-lite-menu .progress-slider::groove {
+  height: 4px;
+  background-color: rgba(128, 130, 158, 0.3);
+  border-radius: 4px;
+}
+.media-lite-menu .progress-slider::sub-page {
+  background-color: #3f925f;
+  border-radius: 4px;
+}
+.media-lite-menu .volume-slider-popup {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 4px;
+  padding: 12px 8px;
+}
+.media-lite-menu .volume-slider {
+  min-height: 120px;
+  max-height: 120px;
+}
+.media-lite-menu .volume-slider::groove {
+  width: 4px;
+  background-color: rgba(128, 130, 158, 0.3);
+  border-radius: 4px;
+}
+.media-lite-menu .volume-slider::sub-page {
+  background-color: rgba(128, 130, 158, 0.3);
+}
+.media-lite-menu .volume-slider::add-page {
+  background-color: #3f925f;
+  border-radius: 4px;
+}
+
+.control-center-widget .widget-container {
+  padding: 0 12px;
 }
 
 .battery-widget .widget-container {
@@ -565,6 +688,113 @@
   margin-left: 4px;
 }
 
+.control-center-menu {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-width: 440px;
+  max-width: 440px;
+}
+.control-center-menu .section {
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.control-center-menu .section.system-controls, .control-center-menu .section.power, .control-center-menu .section.media {
+  border: none;
+}
+.control-center-menu .button, .control-center-menu .power .mode-name {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 0 4px;
+}
+.control-center-menu .button:hover, .control-center-menu .power .mode-name:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.control-center-menu .button:pressed, .control-center-menu .power .mode-name:pressed {
+  background-color: #223a2c;
+}
+.control-center-menu .button.disabled, .control-center-menu .button.disabled:hover, .control-center-menu .power .mode-name.disabled, .control-center-menu .power .mode-name.disabled:hover {
+  color: rgba(186, 187, 202, 0.3);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.control-center-menu .icon, .control-center-menu .source-selector, .control-center-menu .system-controls .button, .control-center-menu .media .button {
+  font-family: Segoe Fluent Icons;
+  font-weight: 400;
+}
+.control-center-menu .system-controls .button, .control-center-menu .media .button {
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 16px;
+}
+.control-center-menu .quick-actions .button {
+  padding: 0;
+  background-color: transparent;
+}
+.control-center-menu .quick-actions .button .icon {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  min-height: 48px;
+  font-size: 18px;
+}
+.control-center-menu .quick-actions .button .icon:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.control-center-menu .quick-actions .button .title {
+  font-size: 12px;
+  margin: 4px 0 8px;
+}
+.control-center-menu .quick-actions .button.active .icon {
+  background-color: #3f925f;
+}
+.control-center-menu .quick-actions .button.active .icon:hover {
+  background-color: #61ad7e;
+}
+.control-center-menu .quick-actions .button.disabled .icon, .control-center-menu .quick-actions .button.disabled .icon:hover {
+  color: rgba(186, 187, 202, 0.3);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.control-center-menu .sliders .slider {
+  min-height: 48px;
+}
+.control-center-menu .sliders .slider .icon, .control-center-menu .sliders .slider .value {
+  min-width: 36px;
+}
+.control-center-menu .sliders .slider .value {
+  font-size: 12px;
+}
+.control-center-menu .slider-control::groove {
+  background-color: rgba(128, 130, 158, 0.3);
+  border-radius: 4px;
+}
+.control-center-menu .slider-control::sub-page {
+  background-color: #3f925f;
+  border-radius: 4px;
+}
+.control-center-menu .slider-control::handle {
+  background-color: #61ad7e;
+  height: 12px;
+  width: 12px;
+}
+.control-center-menu .slider-control:disabled::sub-page, .control-center-menu .slider-control:disabled::handle {
+  background-color: rgba(128, 130, 158, 0.3);
+}
+.control-center-menu .power .title, .control-center-menu .media .subtext {
+  font-size: 12px;
+  color: rgba(186, 187, 202, 0.3);
+}
+.control-center-menu .power .subtext {
+  font-size: 12px;
+}
+.control-center-menu .media {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.control-center-menu .media .track-info {
+  padding-left: 8px;
+}
+.control-center-menu .media .title {
+  font-size: 14px;
+}
+
 .power-menu-overlay .uptime {
   background-color: #223a2c;
   padding: 14px;
@@ -631,5 +861,3 @@
 .power-menu-popup .button.signout:hover {
   background-color: #e04c52;
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -126,12 +126,19 @@ $padding-button: 8px
   .header
     margin-bottom: $sm
   .close-button
-    min-width: 20px
-    min-height: 20px
-    margin: 0 2px
-    padding: 0 4px
+    font-family: $icon
+    font-size: 10px
+    font-weight: 400
+    letter-spacing: 0
+    min-width: $xl2
+    max-width: $xl2
+    min-height: $xl2
+    max-height: $xl2
+    margin: 0
+    padding: 0
+    border: none
     border-radius: $xsm2
-    background-color: red
+    background-color: $red
     &:hover
       background-color: $red-light
 
@@ -218,6 +225,98 @@ $padding-button: 8px
     padding: 0 8px
     max-height: $xl2
     border-radius: $xsm2
+
+.media-lite-widget, .control-center-widget
+  .widget-container
+    background-color: $bg1
+    margin: 0 2px
+    padding: 0 8px
+    max-height: $xl2
+    border-radius: $xsm2
+  .icon
+    font-family: $icon
+    font-weight: 400
+
+.media-lite-widget
+  .text
+    padding-left: $xsm
+  .title, .artist
+    font-size: 10px
+    letter-spacing: 0
+  .artist
+    color: $grey-light
+
+.media-lite-menu
+  background-color: $bg
+  min-width: 320px
+  max-width: 320px
+  .header
+    padding: $lg $lg 0
+  .controls
+    padding: $xl2 $lg
+  .title
+    font-size: $lg
+  .artist
+    color: $grey-light
+    font-size: $sm
+    margin: $xsm2 0 $lg
+  .btn, .volume-button
+    font-family: $icon
+    font-weight: 400
+    font-size: $lg
+    min-width: $xl4
+    min-height: $xl4
+    border-radius: $xsm2
+    &:hover
+      background-color: $bg1
+  .btn
+    margin: $xsm2 2px
+    &.play, &.active
+      background-color: $green
+      &:hover
+        background-color: $green-light
+    &.disabled, &.disabled:hover
+      color: $grey-light
+      background-color: transparent
+  .volume-button
+    &.muted
+      color: $red-light
+    &.unavailable
+      color: $grey-light
+  .playback-time
+    color: $grey-light
+    font-size: $sm
+  .progress-slider
+    min-height: $sm
+    margin: $xsm2 0
+    &::groove
+      height: $xsm2
+      background-color: $grey
+      border-radius: $xsm2
+    &::sub-page
+      background-color: $green
+      border-radius: $xsm2
+  .volume-slider-popup
+    background-color: $bg
+    border: 1px solid $bg1
+    border-radius: $xsm2
+    padding: $sm $xsm
+  .volume-slider
+    min-height: 120px
+    max-height: 120px
+    &::groove
+      width: $xsm2
+      background-color: $grey
+      border-radius: $xsm2
+    &::sub-page
+      background-color: $grey
+    &::add-page
+      background-color: $green
+      border-radius: $xsm2
+
+.control-center-widget
+  .widget-container
+    padding: 0 $sm
 
 .battery-widget
   .widget-container
@@ -487,6 +586,86 @@ $padding-button: 8px
         color: $yellow
     .label
       margin-left: $xsm2
+
+.control-center-menu
+  background-color: $bg
+  min-width: 440px
+  max-width: 440px
+  .section
+    padding: $xsm $lg
+    border-bottom: 1px solid $bg2
+    &.system-controls, &.power, &.media
+      border: none
+  .button, .power .mode-name
+    background-color: $bg2
+    border: none
+    border-radius: $xsm2
+    padding: $xsm
+    margin: 0 $xsm2
+    &:hover
+      background-color: $bg1
+    &:pressed
+      background-color: $green-dark
+    &.disabled, &.disabled:hover
+      color: $grey-light
+      background-color: $bg4
+  .icon, .source-selector, .system-controls .button, .media .button
+    font-family: $icon
+    font-weight: 400
+  .system-controls .button, .media .button
+    min-width: $xl3
+    min-height: $xl3
+    font-size: $lg
+  .quick-actions .button
+    padding: 0
+    background-color: transparent
+    .icon
+      background-color: $bg2
+      border-radius: $xsm2
+      min-height: $xl5
+      font-size: $xl
+      &:hover
+        background-color: $bg1
+    .title
+      font-size: $sm
+      margin: $xsm2 0 $xsm
+    &.active .icon
+      background-color: $green
+      &:hover
+        background-color: $green-light
+    &.disabled .icon, &.disabled .icon:hover
+      color: $grey-light
+      background-color: $bg4
+  .sliders .slider
+    min-height: $xl5
+    .icon, .value
+      min-width: $xl4
+    .value
+      font-size: $sm
+  .slider-control
+    &::groove
+      background-color: $grey
+      border-radius: $xsm2
+    &::sub-page
+      background-color: $green
+      border-radius: $xsm2
+    &::handle
+      background-color: $green-light
+      height: $sm
+      width: $sm
+    &:disabled::sub-page, &:disabled::handle
+      background-color: $grey
+  .power .title, .media .subtext
+    font-size: $sm
+    color: $grey-light
+  .power .subtext
+    font-size: $sm
+  .media
+    background-color: $bg3
+    .track-info
+      padding-left: $xsm
+    .title
+      font-size: $md
 
 .power-menu-overlay
   .uptime

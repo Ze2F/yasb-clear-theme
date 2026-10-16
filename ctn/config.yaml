@@ -18,8 +18,10 @@ bars:
       center:
         - "clock"
       right:
+        - "media"
         - "battery"
         - "userconfig-grouper"
+        - "control_center"
         - "notifications"
         - "power_menu"
 widgets:
@@ -102,20 +104,10 @@ widgets:
     options:
       label: "<span>{icon}</span>"
       label_alt: "<span>{icon}</span> {percent}%"
-      tooltip: true
-      hide_unsupported: true
-      brightness_menu:
-        blur: true
-        round_corners: true
-        round_corners_type: "normal"
-        border_color: "System"
-        alignment: "right"
-        direction: "down"
-        brightness_icon: "\ue706"
-        contrast_icon: "\ue7a1"
       callbacks:
         on_left: "toggle_brightness_menu"
         on_middle: "toggle_label"
+        on_right: "exec cmd.exe /c start ms-settings:display"
   microphone:
     type: "yasb.microphone.MicrophoneWidget"
     options:
@@ -180,13 +172,7 @@ widgets:
       ethernet_label: "\ue839"
       ethernet_label_alt: "\ue839 {ip_addr}"
       ethernet_icon: "\ue839"
-      wifi_icons: [
-        "\udb82\udd2e",
-        "\udb82\udd1f",
-        "\udb82\udd22",
-        "\udb82\udd25",
-        "\udb82\udd28"
-      ]
+      wifi_icons: ["\udb82\udd2e", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
       menu_config:
         blur: true
         round_corners: true
@@ -200,32 +186,28 @@ widgets:
     type: "yasb.grouper.GrouperWidget"
     options:
       class_name: "userinfo-grouper"
-      widgets: [
-        "brightness",
-        "microphone",
-        "volume",
-        "wifi",
-      ]
+      widgets: ["brightness", "microphone", "volume", "wifi"]
       collapse_options:
         enabled: true
         exclude_widgets: []
         expanded_label: "\ue76c\ue713"
         collapsed_label: "\ue76b\ue713"
         label_position: "right"
+  media:
+    type: "yasb.media_lite.MediaWidget"
+    options:
+      image_size: 20
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
       label: "<span>{icon}</span>"
       label_alt: "<span>{icon}</span> {percent}%"
-      hide_unsupported: True
       callbacks:
         on_left: "do_nothing"
         on_middle: "toggle_label"
-        on_right: "do_nothing"
+        on_right: "exec cmd.exe /c start ms-settings:batterysaver"
       charging_options:
         icon_format: "{charging_icon}"
-        blink_charging_icon: true
-        blink_interval: 500
       status_icons:
         icon_charging: "\uebb5"
         icon_critical: "\ue850"
@@ -236,6 +218,7 @@ widgets:
   notifications:
     type: "yasb.notifications.NotificationsWidget"
     options:
+      tooltip: true
       label: "<span>{icon}</span>"
       label_alt: "<span>{icon}</span> {count}"
       icons:
@@ -245,6 +228,11 @@ widgets:
         on_left: "toggle_notification"
         on_middle: "toggle_label"
         on_right: "do_nothing"
+  control_center:
+    type: "yasb.control_center.ControlCenterWidget"
+    options:
+      label: "<span>\ue9e9</span>"
+      tooltip: true
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
